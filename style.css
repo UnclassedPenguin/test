@@ -4,6 +4,9 @@ body {
 
 .maintitle {
 	color: #E17761;
+	position: relative;
+	left: 50%;
+	margin-left: -250px;
 }
 
 .maincontent {
@@ -17,13 +20,19 @@ body {
 	background-color: #61E1B7;
 	margin: auto;
 	padding: 5px;
-	left: 50%;
+	left: 33%;
 	margin-left: -100px;
 	bottom: 50%;
 	margin-bottom: -100px;
 	border-radius: 3px;
-	box-shadow: 5px 10px;
+	box-shadow: 5px 10px rgba(0,0,0,0.24);
 }
+
+.container:hover, 
+.container2:hover {
+	transform: scale(1.1);
+}
+
 
 .box1 {
 	position: absolute;
@@ -98,6 +107,98 @@ body {
 	100% {
 		bottom: 5px;
 		right: 5px;
+	}
+
+}
+
+.container2 {
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	background-color: #61E1B7;
+	margin: auto;
+	padding: 5px;
+	left: 66%;
+	margin-left: -100px;
+	bottom: 50%;
+	margin-bottom: -100px;
+	border-radius: 3px;
+	box-shadow: 5px 10px rgba(0,0,0,0.24);
+}
+
+.box3 {
+	position: absolute;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	height: 30px;
+	width: 30px;
+	background-color: black;
+	margin: 5px;
+	border-radius: 3px;
+	animation-name: box3move;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes box3move {
+	0% {
+		top:5px;
+		left:160px;
+	}
+	25% {
+		top: 5px;
+		left:5px; 
+	}
+	50% {
+		top:160px;
+		left:5px;
+		transform: rotate(360deg);	
+	}
+	75% {
+		top: 160px;
+		left: 160px;
+	}
+	100% {
+		top: 5px;
+		left:160px;
+	}
+}
+
+.box4 {
+	position: absolute;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	height: 30px;
+	width: 30px;
+	background-color:white;
+	margin:5px;
+	border-radius: 3px;
+	animation-name: box4move;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes box4move {
+	0% {
+		bottom: 5px;
+		right: 160px;
+	}
+	25% {
+		bottom: 5px;
+		right: 5px; 
+	}
+	50% {
+		bottom: 160px;
+		right: 5px;
+		transform: rotate(-360deg);
+	}
+	75% {
+		bottom:160px;
+		right:160px;
+	}
+	100% {
+		bottom: 5px;
+		right: 160px;
 	}
 
 }
